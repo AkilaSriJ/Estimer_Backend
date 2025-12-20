@@ -8,6 +8,7 @@ namespace GenXThofa.Technologies.Estimer.API.DependencyInjection
         public static IServiceCollection AddDataDI(this IServiceCollection services)
         {
             services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IUserRepository,UserRepository>();
             return services;
         }
     }
