@@ -1,0 +1,17 @@
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.deps.json
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.runtimeconfig.json
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.pdb
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.pdb
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.csproj.AssemblyReference.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.AssemblyInfoInputs.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.AssemblyInfo.cs
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.csproj.CoreCompileInputs.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThof.84F68CF8.Up2Date
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\refint\GenXThofa.Technologies.Estimer.Data.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.pdb
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Data.genruntimeconfig.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Data\obj\Debug\net8.0\ref\GenXThofa.Technologies.Estimer.Data.dll

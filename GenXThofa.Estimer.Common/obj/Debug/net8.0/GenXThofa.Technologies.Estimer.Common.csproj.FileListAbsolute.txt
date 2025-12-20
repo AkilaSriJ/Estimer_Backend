@@ -1,0 +1,14 @@
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.deps.json
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.runtimeconfig.json
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\bin\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.pdb
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.csproj.AssemblyReference.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.AssemblyInfoInputs.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.AssemblyInfo.cs
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.csproj.CoreCompileInputs.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\refint\GenXThofa.Technologies.Estimer.Common.dll
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.pdb
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\GenXThofa.Technologies.Estimer.Common.genruntimeconfig.cache
+E:\Estimer\GenXThofa.Estimer\GenXThofa.Estimer.Common\obj\Debug\net8.0\ref\GenXThofa.Technologies.Estimer.Common.dll
