@@ -2821,11 +2821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Api\\GenXThofa.Technologies.Estimer.API.csproj",
+      "projectUniqueName": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Api\\GenXThofa.Technologies.Estimer.API.csproj",
       "projectName": "GenXThofa.Technologies.Estimer.API",
-      "projectPath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Api\\GenXThofa.Technologies.Estimer.API.csproj",
+      "projectPath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Api\\GenXThofa.Technologies.Estimer.API.csproj",
       "packagesPath": "C:\\Users\\akila\\.nuget\\packages\\",
-      "outputPath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Api\\obj\\",
+      "outputPath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2847,8 +2847,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.BusinessLogic\\GenXThofa.Technologies.Estimer.BusinessLogic.csproj": {
-              "projectPath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.BusinessLogic\\GenXThofa.Technologies.Estimer.BusinessLogic.csproj"
+            "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.BusinessLogic\\GenXThofa.Technologies.Estimer.BusinessLogic.csproj": {
+              "projectPath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.BusinessLogic\\GenXThofa.Technologies.Estimer.BusinessLogic.csproj"
             }
           }
         }

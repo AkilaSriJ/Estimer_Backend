@@ -2319,11 +2319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\GenXThofa.Technologies.Estimer.Data.csproj",
+      "projectUniqueName": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\GenXThofa.Technologies.Estimer.Data.csproj",
       "projectName": "GenXThofa.Technologies.Estimer.Data",
-      "projectPath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\GenXThofa.Technologies.Estimer.Data.csproj",
+      "projectPath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\GenXThofa.Technologies.Estimer.Data.csproj",
       "packagesPath": "C:\\Users\\akila\\.nuget\\packages\\",
-      "outputPath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\obj\\",
+      "outputPath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2345,8 +2345,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Common\\GenXThofa.Technologies.Estimer.Common.csproj": {
-              "projectPath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Common\\GenXThofa.Technologies.Estimer.Common.csproj"
+            "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Common\\GenXThofa.Technologies.Estimer.Common.csproj": {
+              "projectPath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Common\\GenXThofa.Technologies.Estimer.Common.csproj"
             }
           }
         }

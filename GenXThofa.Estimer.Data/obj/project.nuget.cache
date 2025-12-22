@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ENCEmit6Xfs=",
+  "dgSpecHash": "J/6+BzQRTHw=",
   "success": true,
-  "projectFilePath": "E:\\Estimer\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\GenXThofa.Technologies.Estimer.Data.csproj",
+  "projectFilePath": "E:\\Estimer_Backend\\GenXThofa.Estimer\\GenXThofa.Estimer.Data\\GenXThofa.Technologies.Estimer.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\akila\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\akila\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
