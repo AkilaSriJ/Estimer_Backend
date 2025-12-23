@@ -56,7 +56,6 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
                 throw new Exception("Phone number already exists");
                             }
             var client= _mapper.Map<Client>(dto);
-            client.IsActive = true;
             client.CreatedAt = DateTime.Now;
             await _clientRepository.CreateAsync(client);
             await _clientRepository.SaveChangesAsync();

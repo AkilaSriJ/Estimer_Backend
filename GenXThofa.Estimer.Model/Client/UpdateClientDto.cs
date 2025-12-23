@@ -26,6 +26,6 @@ namespace GenXThofa.Technologies.Estimer.Model.Client
         [StringLength(250, MinimumLength = 5, ErrorMessage = "Address must be 5-250 characters")]
         [RegularExpression(@"^(?!\s*$).+", ErrorMessage = "Address cannot be empty or spaces only")]
         public string Address { get; set; }
-        public bool IsActive { get; set; } = true;
+        public bool IsActive { get; set; }
     }
 }

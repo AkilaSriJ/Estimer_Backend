@@ -49,7 +49,7 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
             var createdClient= await _clientService.CreateAsync(dto);
-            if (!createdClient.Success)
+            if (createdClient==null)
                 return BadRequest(createdClient);
             return Ok(ApiResponseDto<ClientDto>.SuccessResponse(createdClient, "Client Created Successfully"));
         }
