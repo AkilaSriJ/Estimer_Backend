@@ -1,4 +1,5 @@
 ﻿using GenXThofa.Technologies.Estimer.Data.Context;
+using GenXThofa.Technologies.Estimer.Data.Extension;
 using GenXThofa.Technologies.Estimer.Data.Interface;
 using GenXThofa.Technologies.Estimer.Data.Model;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +54,16 @@ namespace GenXThofa.Technologies.Estimer.Data.Repositories
                 throw new ArgumentNullException(nameof(client));
             _dbContext.Clients.Remove(client);
             return Task.CompletedTask;
+        }
+
+        public async Task<bool> ExistsByEmailAsync(string email)
+        {
+           return await _dbContext.Clients.ExistsByEmailAsync(email);
+        }
+
+        public async Task<bool> ExistsByPhoneAsync(string phone)
+        {
+            return await _dbContext.Clients.ExistsByPhoneAsync(phone);
         }
         public async Task SaveChangesAsync()
         {

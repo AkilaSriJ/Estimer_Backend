@@ -14,5 +14,6 @@ namespace GenXThofa.Technologies.Estimer.Model.Client
         public string Phone { get; set; }
         public string Address { get; set; }
         public bool IsActive { get; set; } = true;
+        public bool Success { get; set; }
     }
 }

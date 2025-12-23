@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GenXThofa.Technologies.Estimer.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7511c81577b33907881e65117cf1139f0d2cfe12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbca91aea8c08bcfdcfb28c5da05a5770f4505df")]
 [assembly: System.Reflection.AssemblyProductAttribute("GenXThofa.Technologies.Estimer.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GenXThofa.Technologies.Estimer.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

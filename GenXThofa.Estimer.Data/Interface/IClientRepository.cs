@@ -14,6 +14,8 @@ namespace GenXThofa.Technologies.Estimer.Data.Interface
         Task<Client> CreateAsync(Client client);
         Task UpdateAsync(Client client);
         Task DeleteAsync(Client client);
+        Task<bool> ExistsByEmailAsync(string email);
+        Task<bool> ExistsByPhoneAsync(string phone);
         Task SaveChangesAsync();
     }
 }

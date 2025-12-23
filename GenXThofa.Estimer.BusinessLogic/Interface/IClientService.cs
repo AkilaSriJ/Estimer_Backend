@@ -1,4 +1,5 @@
-﻿using GenXThofa.Technologies.Estimer.Model.Client;
+﻿using GenXThofa.Technologies.Estimer.Common.HelperClasses;
+using GenXThofa.Technologies.Estimer.Model.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Interface
 {
     public interface IClientService
     {
-        Task<IEnumerable<ClientDto>> GetAllAsync();
+        Task<PagedResult<ClientDto>> GetAllAsync(Pagination pagination);
         Task<ClientDto?> GetByIdAsync(int id);
         Task<ClientDto> CreateAsync(CreateClientDto dto);
         Task<ClientDto?> UpdateAsync(int id,UpdateClientDto dto);
