@@ -11,13 +11,9 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClientController : ControllerBase
+    public class ClientController(IClientService clientService) : ControllerBase
     {
-        private readonly IClientService _clientService;
-        public ClientController(IClientService clientService)
-        {
-            _clientService = clientService;
-        }
+        private readonly IClientService _clientService=clientService;
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -47,7 +43,7 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
         public async Task<IActionResult> Create(CreateClientDto dto)
         {
             if(!ModelState.IsValid)
-                return BadRequest(ModelState);
+                return BadRequest(ApiResponseDto<object>.ErrorResponse("Validation failed",ModelState.Values.SelectMany(v=>v.Errors).Select(e=>e.ErrorMessage).ToList()));
             var createdClient= await _clientService.CreateAsync(dto);
             if (createdClient==null)
                 return BadRequest(createdClient);

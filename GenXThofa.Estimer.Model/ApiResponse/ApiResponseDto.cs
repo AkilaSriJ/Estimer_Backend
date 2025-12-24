@@ -12,7 +12,7 @@ namespace GenXThofa.Technologies.Estimer.Model.ApiResponse
         public bool Success { get; set; }
         public string Message { get; set; }
         public T? Data { get; set; }
-        public List? Errors { get; set; }
+        public List<string>? Errors { get; set; }
 
         public static ApiResponseDto<T> SuccessResponse(T data, string message)
         {
@@ -24,7 +24,7 @@ namespace GenXThofa.Technologies.Estimer.Model.ApiResponse
             };
         }
 
-        public static ApiResponseDto<T> ErrorResponse(string message, List? errors = null)
+        public static ApiResponseDto<T> ErrorResponse(string message, List<string>? errors = null)
         {
             return new ApiResponseDto<T>
             {

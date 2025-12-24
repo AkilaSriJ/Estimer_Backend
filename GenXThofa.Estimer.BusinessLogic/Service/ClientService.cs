@@ -13,15 +13,10 @@ using System.Threading.Tasks;
 
 namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
 {
-    public class ClientService: IClientService
+    public class ClientService(IClientRepository clientRepository, IMapper mapper) : IClientService
     {
-        private readonly IClientRepository _clientRepository;
-        private readonly IMapper _mapper;
-        public ClientService(IClientRepository clientRepository, IMapper mapper) 
-        {
-            _clientRepository = clientRepository;
-            _mapper = mapper;
-        }
+        private readonly IClientRepository _clientRepository=clientRepository;
+        private readonly IMapper _mapper = mapper;
 
         public async Task<PagedResult<ClientDto>> GetAllAsync(Pagination pagination)
         {
@@ -54,7 +49,11 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
             if(await _clientRepository.ExistsByPhoneAsync(dto.Phone))
             {
                 throw new Exception("Phone number already exists");
-                            }
+            
+            }
+            TrimClientFields(dto);
+            ValidatePhone(dto.Country, dto.Phone);
+
             var client= _mapper.Map<Client>(dto);
             client.CreatedAt = DateTime.Now;
             await _clientRepository.CreateAsync(client);
@@ -94,5 +93,52 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
             await _clientRepository.SaveChangesAsync();
             return true;
         }
+
+        private void TrimClientFields(CreateClientDto dto)
+        {
+            dto.CompanyName = dto.CompanyName?.Trim();
+            dto.CompanyContactPerson = dto.CompanyContactPerson?.Trim();
+            dto.Email = dto.Email?.Trim();
+            dto.Phone = dto.Phone?.Trim();
+            dto.AddressLine1 = dto.AddressLine1?.Trim();
+            dto.AddressLine2 = dto.AddressLine2?.Trim();
+            dto.City = dto.City?.Trim();
+            dto.StateProvince = dto.StateProvince?.Trim();
+            dto.PostalCode = dto.PostalCode?.Trim();
+            dto.Country = dto.Country?.Trim();
+        }
+
+        private void ValidatePhone(string country, string phone)
+        {
+            phone = phone.Trim();
+
+            if (!phone.All(char.IsDigit))
+                throw new ArgumentException("Phone number must contain only digits");
+
+            switch (country.ToLower())
+            {
+                case "india":
+                    if (phone.Length != 10)
+                        throw new ArgumentException("Indian mobile number must be 10 digits");
+                    break;
+
+                case "usa":
+                    if (phone.Length != 10)
+                        throw new ArgumentException("US mobile number must be 10 digits");
+                    break;
+
+                case "uk":
+                    if (phone.Length < 10 || phone.Length > 11)
+                        throw new ArgumentException("UK mobile number must be 10–11 digits");
+                    break;
+
+                default:
+                    if (phone.Length < 7 || phone.Length > 15)
+                        throw new ArgumentException("Invalid phone number length");
+                    break;
+            }
+        }
+
+
     }
 }

@@ -12,16 +12,10 @@ using System.Threading.Tasks;
 
 namespace GenXThofa.Technologies.Estimer.Data.Repositories
 {
-    public class ClientRepository: IClientRepository
+    public class ClientRepository(AppDbContext dbContext, ILogger<ClientRepository> logger) : IClientRepository
     {
-        private readonly AppDbContext _dbContext;
-        private readonly ILogger<ClientRepository> _logger;
-        public ClientRepository(AppDbContext dbContext, ILogger<ClientRepository> logger)
-        {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        }
-
+        private readonly AppDbContext _dbContext= dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+        private readonly ILogger<ClientRepository> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         public IQueryable<Client> GetAll()
         {
             return _dbContext.Clients.AsNoTracking();

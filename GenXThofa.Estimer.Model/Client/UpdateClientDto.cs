@@ -9,23 +9,44 @@ namespace GenXThofa.Technologies.Estimer.Model.Client
 {
     public class UpdateClientDto
     {
-        [Required(ErrorMessage = "Client Name is Required")]
-        [StringLength(50)]
-        [RegularExpression(@"^[a-zA-Z]+(?: [a-zA-Z]+)*$", ErrorMessage = "Client Name should Contain only letters")]
-        public string ClientName { get; set; }
+        [Required(ErrorMessage = "Client name is required")]
+        [MaxLength(200, ErrorMessage = "Client name cannot exceed 200 characters")]
+        public string CompanyName { get; set; }
+
+        [Required(ErrorMessage = "Contact Person name is required")]
+        [MaxLength(150, ErrorMessage = "contact person name cannot exceed 150 characters")]
+        public string CompanyContactPerson { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
-        [EmailAddress(ErrorMessage = "Invalid email format")]
+        [EmailAddress(ErrorMessage = "Invalid email Format ")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Phone number is required")]
-        [RegularExpression(@"^\d{10}$", ErrorMessage = "Phone number must be exactly 10 digits")]
+        [MaxLength(20, ErrorMessage = "Phone number cannot exceed 20 characters")]
         public string Phone { get; set; }
 
-        [Required(ErrorMessage = "Address is required")]
-        [StringLength(250, MinimumLength = 5, ErrorMessage = "Address must be 5-250 characters")]
-        [RegularExpression(@"^(?!\s*$).+", ErrorMessage = "Address cannot be empty or spaces only")]
-        public string Address { get; set; }
+        [Required(ErrorMessage = "Address Line 1 is required")]
+        [MaxLength(250, ErrorMessage = "Address Line 1 cannot exceed 250 characters")]
+        public string AddressLine1 { get; set; }
+
+        [MaxLength(250, ErrorMessage = "Address Line 2 cannot exceed 250 characters")]
+        public string AddressLine2 { get; set; }
+
+        [Required(ErrorMessage = "City is required")]
+        [MaxLength(100, ErrorMessage = "City cannot exceed 100 characters")]
+        public string City { get; set; }
+
+        [Required(ErrorMessage = "State/Province is required")]
+        [MaxLength(100, ErrorMessage = "State/Province cannot exceed 100 characters")]
+        public string StateProvince { get; set; }
+
+        [Required(ErrorMessage = "Postal code is required")]
+        [MaxLength(20, ErrorMessage = "Postal code cannot exceed 20 characters")]
+        public string PostalCode { get; set; }
+
+        [Required(ErrorMessage = "Country is required")]
+        [MaxLength(100, ErrorMessage = "Country cannot exceed 100 characters")]
+        public string Country { get; set; }
         public bool IsActive { get; set; }
     }
 }

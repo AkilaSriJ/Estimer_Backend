@@ -9,10 +9,16 @@ namespace GenXThofa.Technologies.Estimer.Data.Model
     public class Client
     {
         public int ClientId { get; set; }
-        public string ClientName { get; set; }
+        public string CompanyName { get; set; }
+        public string CompanyContactPerson {  get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public string Address { get; set; }
+        public string AddressLine1 { get; set; }
+        public string AddressLine2 {  get; set; }
+        public string City { get; set; }
+        public string StateProvince { get; set; }
+        public string PostalCode { get; set; }
+        public string Country { get; set; }
         public bool IsActive { get; set; } = true;
         public DateTime CreatedAt { get; set; }
         public int? CreatedBy { get; set; }
