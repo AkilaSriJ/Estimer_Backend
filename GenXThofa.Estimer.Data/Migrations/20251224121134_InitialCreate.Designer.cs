@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GenXThofa.Technologies.Estimer.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251219084419_InitialCreate")]
+    [Migration("20251224121134_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -56,11 +56,27 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Address")
+                    b.Property<string>("AddressLine1")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("ClientName")
+                    b.Property<string>("AddressLine2")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CompanyContactPerson")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("CompanyName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Country")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -78,6 +94,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("StateProvince")
                         .IsRequired()
                         .HasColumnType("longtext");
 
