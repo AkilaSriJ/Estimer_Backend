@@ -15,6 +15,7 @@ namespace GenXThofa.Technologies.Estimer.Model.Client
 
         [Required(ErrorMessage = "Contact Person name is required")]
         [MaxLength(150, ErrorMessage = "contact person name cannot exceed 150 characters")]
+        [RegularExpression(@"^[a-zA-Z]+(?: [a-zA-Z]+)*$", ErrorMessage = "Client Name should contain only letters and not be empty")]
         public string CompanyContactPerson { get; set; }
 
         [Required(ErrorMessage = "Email is required")]
