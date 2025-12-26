@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace GenXThofa.Technologies.Estimer.Data.Interface
 {
-    public interface IUserRepository
+    public interface IProjectRepository
     {
-        IQueryable<User> GetAll();
-        Task<User> GetByIdAsync(int id);
-        Task<User> CreateAsync(User user);
-        Task UpdateAsync(User user);
-        Task DeleteAsync(User user);
+        IQueryable<Project> GetAll();
+        Task<Project> GetByIdAsync(int id);
+        Task<Project> CreateAsync(Project project);
+        Task UpdateAsync(Project project);
+        Task DeleteAsync(Project project);
         Task SaveChangesAsync();
     }
 }

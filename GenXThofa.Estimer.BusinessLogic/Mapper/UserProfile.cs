@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using GenXThofa.Technologies.Estimer.Data.Model;
+using GenXThofa.Technologies.Estimer.Data.Models;
 using GenXThofa.Technologies.Estimer.Model.User;
 using System;
 using System.Collections.Generic;

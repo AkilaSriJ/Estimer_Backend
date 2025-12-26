@@ -3,7 +3,7 @@ using GenXThofa.Technologies.Estimer.BusinessLogic.Interface;
 using GenXThofa.Technologies.Estimer.Common.HelperClasses;
 using GenXThofa.Technologies.Estimer.Data.Extension;
 using GenXThofa.Technologies.Estimer.Data.Interface;
-using GenXThofa.Technologies.Estimer.Data.Model;
+using GenXThofa.Technologies.Estimer.Data.Models;
 using GenXThofa.Technologies.Estimer.Model.Client;
 using System;
 using System.Collections.Generic;

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace GenXThofa.Technologies.Estimer.Model.Role
 {
-    internal class RoleDto
+    public class RoleDto
     {
         public int RoleId { get; set; }
         public string RoleName { get; set; }
         public string Description { get; set; }
+        public Dictionary<string,List<string>> Permissions { get; set; }
         public bool IsActive { get; set; } 
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using GenXThofa.Technologies.Estimer.BusinessLogic.Interface;
 using GenXThofa.Technologies.Estimer.Data.Interface;
-using GenXThofa.Technologies.Estimer.Data.Model;
+using GenXThofa.Technologies.Estimer.Data.Models;
 using GenXThofa.Technologies.Estimer.Data.Repositories;
 using GenXThofa.Technologies.Estimer.Model.Client;
 using GenXThofa.Technologies.Estimer.Model.User;
@@ -35,6 +35,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
         {
             var user = _mapper.Map<User>(dto);
             await _userRepository.CreateAsync(user);
+            user.CreatedAt = DateTime.UtcNow;
             await _userRepository.SaveChangesAsync();
             return _mapper.Map<UserDto>(user);
         }

@@ -1,4 +1,4 @@
-﻿using GenXThofa.Technologies.Estimer.Data.Model;
+﻿using GenXThofa.Technologies.Estimer.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
