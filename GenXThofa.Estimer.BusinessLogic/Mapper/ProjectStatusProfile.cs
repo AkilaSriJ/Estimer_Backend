@@ -14,7 +14,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Mapper
         public ProjectStatusProfile() 
         {
             CreateMap<CreateProjectStatusDto, ProjectStatus>();  
-            CreateMap<ProjectStatus, ProjectStatusDto>();
+            CreateMap<ProjectStatus, ProjectStatusDto>().ForMember(dest => dest.ProjectStatus,opt => opt.MapFrom(src => src.ProjectStatus != null ? src.ProjectStatus.StatusName : null)); ;
         
         
         }

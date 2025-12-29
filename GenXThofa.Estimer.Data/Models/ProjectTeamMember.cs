@@ -11,10 +11,12 @@ namespace GenXThofa.Technologies.Estimer.Data.Models
         public int ProjectTeamMemberId { get; set; }
         public int? ProjectId { get; set; }
         public int? EmployeeId { get; set; }
-        public int TeamRoleId { get; set; }
-        public decimal? AllocationPercentage { get; set; }
-        public DateTime? AssignedDate { get; set; }
-        public DateTime? EndDate { get; set; }
+        public string EmployeeName {  get; set; }
+        public string Designation { get; set; }
+        public int RoleId { get; set; }
+        public decimal? HourlyRate { get; set; }
+        public int EstimatedHours {  get; set; }
+        public decimal TotalCost {  get; set; }
         public bool IsActive { get; set; } = true;
         public DateTime CreatedAt { get; set; }
         public int? CreatedBy { get; set; }
@@ -23,6 +25,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Models
 
         public Project Project { get; set; }
         public User Employee { get; set; }
-        public TeamRole TeamRole { get; set; }
+        public Role Roles { get; set; }
     }
 }

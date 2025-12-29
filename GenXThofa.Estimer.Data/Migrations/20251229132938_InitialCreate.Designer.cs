@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GenXThofa.Technologies.Estimer.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251224121134_InitialCreate")]
+    [Migration("20251229132938_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -22,7 +22,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                 .HasAnnotation("ProductVersion", "8.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ActionType", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ActionType", b =>
                 {
                     b.Property<int>("ActionTypeId")
                         .ValueGeneratedOnAdd()
@@ -50,7 +50,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("ActionTypes");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Client", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Client", b =>
                 {
                     b.Property<int>("ClientId")
                         .ValueGeneratedOnAdd()
@@ -120,7 +120,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("Clients");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ClientAuditLog", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ClientAuditLog", b =>
                 {
                     b.Property<int>("ClientAuditLogId")
                         .ValueGeneratedOnAdd()
@@ -176,7 +176,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("ClientAuditLogs");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.CostType", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.CostType", b =>
                 {
                     b.Property<int>("CostTypeId")
                         .ValueGeneratedOnAdd()
@@ -216,7 +216,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("CostTypes");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EntityType", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EntityType", b =>
                 {
                     b.Property<int>("EntityTypeId")
                         .ValueGeneratedOnAdd()
@@ -244,7 +244,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("EntityTypes");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Estimate", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Estimate", b =>
                 {
                     b.Property<int>("EstimateId")
                         .ValueGeneratedOnAdd()
@@ -316,7 +316,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("Estimates");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateAdditionalCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateAdditionalCost", b =>
                 {
                     b.Property<int>("EstimateAdditionalCostId")
                         .HasColumnType("int");
@@ -351,7 +351,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("EstimateAdditionalCosts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateDirectCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateDirectCost", b =>
                 {
                     b.Property<int>("EstimateDirectCostId")
                         .HasColumnType("int");
@@ -395,7 +395,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("EstimateDirectCosts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateIndirectCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateIndirectCost", b =>
                 {
                     b.Property<int>("EstimateIndirectCostId")
                         .HasColumnType("int");
@@ -430,7 +430,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("EstimateIndirectCosts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateLaborCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateLaborCost", b =>
                 {
                     b.Property<int>("EstimateLaborCostId")
                         .HasColumnType("int");
@@ -467,7 +467,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("EstimateLaborCosts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimationStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimationStatus", b =>
                 {
                     b.Property<int>("EstimationStatusId")
                         .ValueGeneratedOnAdd()
@@ -498,7 +498,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("EstimationStatuses");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Invoice", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Invoice", b =>
                 {
                     b.Property<int>("InvoiceId")
                         .ValueGeneratedOnAdd()
@@ -588,7 +588,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("Invoices");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.InvoiceAuditLog", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.InvoiceAuditLog", b =>
                 {
                     b.Property<int>("InvoiceAuditLogId")
                         .ValueGeneratedOnAdd()
@@ -644,7 +644,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("InvoiceAuditLogs");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.InvoiceStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.InvoiceStatus", b =>
                 {
                     b.Property<int>("InvoiceStatusId")
                         .ValueGeneratedOnAdd()
@@ -675,7 +675,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("InvoiceStatuses");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.MilestoneStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.MilestoneStatus", b =>
                 {
                     b.Property<int>("MilestoneStatusId")
                         .ValueGeneratedOnAdd()
@@ -706,7 +706,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("MilestoneStatuses");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.PaymentMode", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.PaymentMode", b =>
                 {
                     b.Property<int>("PaymentModeId")
                         .ValueGeneratedOnAdd()
@@ -737,7 +737,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("PaymentModes");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.PaymentReceipt", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.PaymentReceipt", b =>
                 {
                     b.Property<int>("PaymentReceiptId")
                         .ValueGeneratedOnAdd()
@@ -795,7 +795,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("PaymentReceipts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.PaymentType", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.PaymentType", b =>
                 {
                     b.Property<int>("PaymentTypeId")
                         .ValueGeneratedOnAdd()
@@ -826,7 +826,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("PaymentTypes");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Project", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Project", b =>
                 {
                     b.Property<int>("ProjectId")
                         .ValueGeneratedOnAdd()
@@ -888,7 +888,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectAuditLog", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectAuditLog", b =>
                 {
                     b.Property<int>("ProjectAuditLogId")
                         .ValueGeneratedOnAdd()
@@ -944,7 +944,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("ProjectAuditLogs");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectMilestone", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectMilestone", b =>
                 {
                     b.Property<int>("ProjectMilestoneId")
                         .HasColumnType("int");
@@ -1002,7 +1002,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("ProjectMilestones");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectStatus", b =>
                 {
                     b.Property<int>("ProjectStatusId")
                         .ValueGeneratedOnAdd()
@@ -1012,7 +1012,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int?>("DisplayOrder")
@@ -1037,17 +1036,11 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("ProjectStatuses");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectTeamMember", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectTeamMember", b =>
                 {
                     b.Property<int>("ProjectTeamMemberId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    b.Property<decimal?>("AllocationPercentage")
-                        .HasColumnType("decimal(65,30)");
-
-                    b.Property<DateTime?>("AssignedDate")
-                        .HasColumnType("datetime(6)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
@@ -1055,11 +1048,22 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Property<int?>("CreatedBy")
                         .HasColumnType("int");
 
+                    b.Property<string>("Designation")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<int?>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("datetime(6)");
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("EstimatedHours")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("HourlyRate")
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
@@ -1067,8 +1071,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Property<int?>("ProjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeamRoleId")
+                    b.Property<int>("RoleId")
                         .HasColumnType("int");
+
+                    b.Property<int?>("TeamRoleId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalCost")
+                        .HasColumnType("decimal(65,30)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
@@ -1082,12 +1092,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
 
                     b.HasIndex("ProjectId");
 
+                    b.HasIndex("RoleId");
+
                     b.HasIndex("TeamRoleId");
 
                     b.ToTable("ProjectTeamMembers");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Role", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Role", b =>
                 {
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
@@ -1119,7 +1131,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.TaxConfig", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.TaxConfig", b =>
                 {
                     b.Property<int>("TaxConfigId")
                         .ValueGeneratedOnAdd()
@@ -1146,7 +1158,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("TaxConfigs");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.TeamRole", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.TeamRole", b =>
                 {
                     b.Property<int>("TeamRoleId")
                         .ValueGeneratedOnAdd()
@@ -1177,7 +1189,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("TeamRoles");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.User", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.User", b =>
                 {
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
@@ -1214,14 +1226,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Client", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Client", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "CreatedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "CreatedByUser")
                         .WithMany("CreatedClients")
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "UpdatedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "UpdatedByUser")
                         .WithMany("UpdatedClients")
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1231,19 +1243,19 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("UpdatedByUser");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ClientAuditLog", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ClientAuditLog", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.ActionType", "ActionType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.ActionType", "ActionType")
                         .WithMany()
                         .HasForeignKey("ActionTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.EntityType", "EntityType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.EntityType", "EntityType")
                         .WithMany()
                         .HasForeignKey("EntityTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "PerformedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "PerformedByUser")
                         .WithMany()
                         .HasForeignKey("PerformedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1255,20 +1267,20 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("PerformedByUser");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Estimate", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Estimate", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.EstimationStatus", "EstimationStatus")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.EstimationStatus", "EstimationStatus")
                         .WithMany("Estimates")
                         .HasForeignKey("EstimationStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Project", "Project")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Project", "Project")
                         .WithMany("Estimates")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.TaxConfig", "Tax")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.TaxConfig", "Tax")
                         .WithMany("Estimates")
                         .HasForeignKey("TaxId")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1280,15 +1292,15 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Tax");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateAdditionalCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateAdditionalCost", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.CostType", "CostType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.CostType", "CostType")
                         .WithMany("AdditionalCosts")
                         .HasForeignKey("CostTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Estimate", "Estimation")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Estimate", "Estimation")
                         .WithMany("AdditionalCosts")
                         .HasForeignKey("EstimateAdditionalCostId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1299,15 +1311,15 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Estimation");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateDirectCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateDirectCost", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.CostType", "CostType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.CostType", "CostType")
                         .WithMany("DirectCosts")
                         .HasForeignKey("CostTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Estimate", "Estimation")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Estimate", "Estimation")
                         .WithMany("DirectCosts")
                         .HasForeignKey("EstimateDirectCostId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1318,15 +1330,15 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Estimation");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateIndirectCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateIndirectCost", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.CostType", "CostType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.CostType", "CostType")
                         .WithMany("IndirectCosts")
                         .HasForeignKey("CostTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Estimate", "Estimation")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Estimate", "Estimation")
                         .WithMany("IndirectCosts")
                         .HasForeignKey("EstimateIndirectCostId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1337,14 +1349,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Estimation");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimateLaborCost", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimateLaborCost", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "Employee")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "Employee")
                         .WithMany("EstimateLaborCosts")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Estimate", "Estimation")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Estimate", "Estimation")
                         .WithMany("LaborCosts")
                         .HasForeignKey("EstimateLaborCostId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1355,31 +1367,31 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Estimation");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Invoice", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Invoice", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Client", "Client")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Client", "Client")
                         .WithMany("Invoices")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.InvoiceStatus", "InvoiceStatus")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.InvoiceStatus", "InvoiceStatus")
                         .WithMany("Invoices")
                         .HasForeignKey("InvoiceStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.ProjectMilestone", "Milestone")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.ProjectMilestone", "Milestone")
                         .WithMany("Invoices")
                         .HasForeignKey("MilestoneId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.PaymentType", "PaymentType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.PaymentType", "PaymentType")
                         .WithMany("Invoices")
                         .HasForeignKey("PaymentTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Project", "Project")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Project", "Project")
                         .WithMany("Invoices")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1395,19 +1407,19 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.InvoiceAuditLog", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.InvoiceAuditLog", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.ActionType", "ActionType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.ActionType", "ActionType")
                         .WithMany()
                         .HasForeignKey("ActionTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.EntityType", "EntityType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.EntityType", "EntityType")
                         .WithMany()
                         .HasForeignKey("EntityTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "PerformedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "PerformedByUser")
                         .WithMany()
                         .HasForeignKey("PerformedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1419,14 +1431,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("PerformedByUser");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.PaymentReceipt", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.PaymentReceipt", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Invoice", "Invoice")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Invoice", "Invoice")
                         .WithMany("PaymentReceipts")
                         .HasForeignKey("InvoiceId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.PaymentMode", "PaymentMode")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.PaymentMode", "PaymentMode")
                         .WithMany("PaymentReceipts")
                         .HasForeignKey("PaymentModeId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1437,30 +1449,30 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("PaymentMode");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Project", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Project", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Client", "Client")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Client", "Client")
                         .WithMany("Projects")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "CreatedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "CreatedByUser")
                         .WithMany("CreatedProjects")
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "ProjectManager")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "ProjectManager")
                         .WithMany("ManagedProjects")
                         .HasForeignKey("ProjectManagerId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.ProjectStatus", "ProjectStatus")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.ProjectStatus", "ProjectStatus")
                         .WithMany("Projects")
                         .HasForeignKey("ProjectStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "UpdatedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "UpdatedByUser")
                         .WithMany("UpdatedProjects")
                         .HasForeignKey("UpdatedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1476,19 +1488,19 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("UpdatedByUser");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectAuditLog", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectAuditLog", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.ActionType", "ActionType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.ActionType", "ActionType")
                         .WithMany()
                         .HasForeignKey("ActionTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.EntityType", "EntityType")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.EntityType", "EntityType")
                         .WithMany()
                         .HasForeignKey("EntityTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "PerformedByUser")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "PerformedByUser")
                         .WithMany()
                         .HasForeignKey("PerformedBy")
                         .OnDelete(DeleteBehavior.Restrict);
@@ -1500,15 +1512,15 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("PerformedByUser");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectMilestone", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectMilestone", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.MilestoneStatus", "MilestoneStatus")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.MilestoneStatus", "MilestoneStatus")
                         .WithMany("Milestones")
                         .HasForeignKey("MilestoneStatusId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Project", "Project")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Project", "Project")
                         .WithMany("Milestones")
                         .HasForeignKey("ProjectMilestoneId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1519,34 +1531,38 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectTeamMember", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectTeamMember", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.User", "Employee")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.User", "Employee")
                         .WithMany("ProjectTeamMembers")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Project", "Project")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Project", "Project")
                         .WithMany("TeamMembers")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.TeamRole", "TeamRole")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Role", "Roles")
                         .WithMany("TeamMembers")
-                        .HasForeignKey("TeamRoleId")
+                        .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.TeamRole", null)
+                        .WithMany("TeamMembers")
+                        .HasForeignKey("TeamRoleId");
 
                     b.Navigation("Employee");
 
                     b.Navigation("Project");
 
-                    b.Navigation("TeamRole");
+                    b.Navigation("Roles");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.User", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.User", b =>
                 {
-                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Model.Role", "Role")
+                    b.HasOne("GenXThofa.Technologies.Estimer.Data.Models.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1555,14 +1571,14 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Client", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Client", b =>
                 {
                     b.Navigation("Invoices");
 
                     b.Navigation("Projects");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.CostType", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.CostType", b =>
                 {
                     b.Navigation("AdditionalCosts");
 
@@ -1571,7 +1587,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("IndirectCosts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Estimate", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Estimate", b =>
                 {
                     b.Navigation("AdditionalCosts");
 
@@ -1582,37 +1598,37 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("LaborCosts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.EstimationStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.EstimationStatus", b =>
                 {
                     b.Navigation("Estimates");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Invoice", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Invoice", b =>
                 {
                     b.Navigation("PaymentReceipts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.InvoiceStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.InvoiceStatus", b =>
                 {
                     b.Navigation("Invoices");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.MilestoneStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.MilestoneStatus", b =>
                 {
                     b.Navigation("Milestones");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.PaymentMode", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.PaymentMode", b =>
                 {
                     b.Navigation("PaymentReceipts");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.PaymentType", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.PaymentType", b =>
                 {
                     b.Navigation("Invoices");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Project", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Project", b =>
                 {
                     b.Navigation("Estimates");
 
@@ -1623,32 +1639,34 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Navigation("TeamMembers");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectMilestone", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectMilestone", b =>
                 {
                     b.Navigation("Invoices");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.ProjectStatus", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.ProjectStatus", b =>
                 {
                     b.Navigation("Projects");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.Role", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.Role", b =>
                 {
+                    b.Navigation("TeamMembers");
+
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.TaxConfig", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.TaxConfig", b =>
                 {
                     b.Navigation("Estimates");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.TeamRole", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.TeamRole", b =>
                 {
                     b.Navigation("TeamMembers");
                 });
 
-            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Model.User", b =>
+            modelBuilder.Entity("GenXThofa.Technologies.Estimer.Data.Models.User", b =>
                 {
                     b.Navigation("CreatedClients");
 

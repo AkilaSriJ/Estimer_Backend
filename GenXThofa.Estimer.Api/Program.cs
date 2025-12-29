@@ -1,3 +1,4 @@
+using AutoMapper;
 using GenXThofa.Technologies.Estimer.API.DependencyInjection;
 using GenXThofa.Technologies.Estimer.BusinessLogic.Mapper;
 using GenXThofa.Technologies.Estimer.Data;
@@ -7,8 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options=>options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),new MySqlServerVersion(new Version(9,1,0))));
-builder.Services.AddAutoMapper(typeof(ClientProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(ProjectStatusProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(UserProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(RoleProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(ClientProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(ProjectProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(ProjectTeamProfile).Assembly);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

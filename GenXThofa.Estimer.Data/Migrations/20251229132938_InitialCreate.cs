@@ -192,7 +192,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     StatusName = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Description = table.Column<string>(type: "longtext", nullable: false)
+                    Description = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     DisplayOrder = table.Column<int>(type: "int", nullable: true),
                     StatusColor = table.Column<string>(type: "longtext", nullable: false)
@@ -648,15 +648,20 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ProjectId = table.Column<int>(type: "int", nullable: true),
                     EmployeeId = table.Column<int>(type: "int", nullable: true),
-                    TeamRoleId = table.Column<int>(type: "int", nullable: false),
-                    AllocationPercentage = table.Column<decimal>(type: "decimal(65,30)", nullable: true),
-                    AssignedDate = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    EndDate = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    EmployeeName = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Designation = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    RoleId = table.Column<int>(type: "int", nullable: false),
+                    HourlyRate = table.Column<decimal>(type: "decimal(65,30)", nullable: true),
+                    EstimatedHours = table.Column<int>(type: "int", nullable: false),
+                    TotalCost = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     IsActive = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: true),
                     UpdatedAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    UpdatedBy = table.Column<int>(type: "int", nullable: true)
+                    UpdatedBy = table.Column<int>(type: "int", nullable: true),
+                    TeamRoleId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -668,11 +673,16 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         principalColumn: "ProjectId",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
+                        name: "FK_ProjectTeamMembers_Roles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Roles",
+                        principalColumn: "RoleId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_ProjectTeamMembers_TeamRoles_TeamRoleId",
                         column: x => x.TeamRoleId,
                         principalTable: "TeamRoles",
-                        principalColumn: "TeamRoleId",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "TeamRoleId");
                     table.ForeignKey(
                         name: "FK_ProjectTeamMembers_Users_EmployeeId",
                         column: x => x.EmployeeId,
@@ -1091,6 +1101,11 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                 name: "IX_ProjectTeamMembers_ProjectId",
                 table: "ProjectTeamMembers",
                 column: "ProjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectTeamMembers_RoleId",
+                table: "ProjectTeamMembers",
+                column: "RoleId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProjectTeamMembers_TeamRoleId",

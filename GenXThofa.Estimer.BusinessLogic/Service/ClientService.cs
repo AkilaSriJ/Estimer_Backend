@@ -4,6 +4,7 @@ using GenXThofa.Technologies.Estimer.Common.HelperClasses;
 using GenXThofa.Technologies.Estimer.Data.Extension;
 using GenXThofa.Technologies.Estimer.Data.Interface;
 using GenXThofa.Technologies.Estimer.Data.Models;
+using GenXThofa.Technologies.Estimer.Model.ApiResponse;
 using GenXThofa.Technologies.Estimer.Model.Client;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,10 @@ using System.Threading.Tasks;
 
 namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
 {
-    public class ClientService(IClientRepository clientRepository, IMapper mapper) : IClientService
+    public class ClientService(IClientRepository clientRepository,IProjectRepository projectRepository, IMapper mapper) : IClientService
     {
         private readonly IClientRepository _clientRepository=clientRepository;
+        private readonly IProjectRepository _projectRepository = projectRepository;
         private readonly IMapper _mapper = mapper;
 
         public async Task<PagedResult<ClientDto>> GetAllAsync(Pagination pagination)
@@ -87,6 +89,11 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
             var client = await _clientRepository.GetByIdAsync(id);
             if (client == null)
                 return false;
+            bool hasProjects=_projectRepository.GetAll().Any(p=>p.ClientId == client.ClientId);
+            if (hasProjects)
+            {
+               // return ApiResponseDto<bool>.ErrorResponse("Client cannot be deleted because it has associate Projects");
+            }
             if (client.IsActive)
                 throw new Exception("Active client cannot be deleted");
             await _clientRepository.DeleteAsync(client);
