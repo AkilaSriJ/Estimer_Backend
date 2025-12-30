@@ -17,7 +17,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Repositories
         private readonly ILogger<ProjectRepository> _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         public IQueryable<Project> GetAll()
         {
-            return _dbContext.Projects.Include(p=>p.ProjectManager).AsNoTracking();
+            return _dbContext.Projects.Include(p=>p.ProjectManager).Include(p=>p.ProjectStatus).Include(p=>p.Client).AsNoTracking();
 
         }
         public async Task<Project> GetByIdAsync(int id)
