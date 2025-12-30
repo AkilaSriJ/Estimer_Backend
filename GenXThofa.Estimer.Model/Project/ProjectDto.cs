@@ -12,6 +12,7 @@ namespace GenXThofa.Technologies.Estimer.Model.Project
         public string ProjectName { get; set; }
         public string ProjectCode { get; set; }
         public int? ClientId { get; set; }
+        public string CompanyName {  get; set; }
         public int? ProjectManagerId { get; set; }
         public string ProjectManager { get; set; }
         public int ProjectStatusId { get; set; }
