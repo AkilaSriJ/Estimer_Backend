@@ -19,7 +19,7 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
         public async Task<IActionResult> GetAll([FromQuery] Pagination pagination)
         {
             var mileStoneStatus = await _mileStoneStatusService.GetAllAsync(pagination);
-            var response = ApiResponseDto<PagedResult<MileStoneStatusDto>>.SuccessResponse(mileStoneStatus, "Project Status Fetched Sucessfully");
+            var response = ApiResponseDto<PagedResult<MileStoneStatusDto>>.SuccessResponse(mileStoneStatus, "MileStone Status Fetched Sucessfully");
             return Ok(response);
         }
 
@@ -33,7 +33,7 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             {
                 return NotFound(ApiResponseDto<ProjectStatusDto>.ErrorResponse("Status Not Found"));
             }
-            return Ok(ApiResponseDto<MileStoneStatusDto>.SuccessResponse(mileStoneStatus, "Project Status Fetched Successfully"));
+            return Ok(ApiResponseDto<MileStoneStatusDto>.SuccessResponse(mileStoneStatus, "MileStone Status Fetched Successfully"));
         }
 
         [HttpPost]
@@ -73,7 +73,7 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             {
                 return NotFound(ApiResponseDto<bool>.ErrorResponse("Status Not Found"));
             }
-            return Ok(ApiResponseDto<bool>.SuccessResponse(true, "ProjectStatus Deleted Successfully"));
+            return Ok(ApiResponseDto<bool>.SuccessResponse(true, "MileStoneStatus Deleted Successfully"));
         }
     }
 }

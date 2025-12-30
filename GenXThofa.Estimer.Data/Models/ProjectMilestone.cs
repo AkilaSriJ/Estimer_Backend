@@ -9,7 +9,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Models
     public class ProjectMilestone
     {
         public int ProjectMilestoneId { get; set; }
-        public int? ProjectId { get; set; }
+        public int ProjectId { get; set; }
         public string MilestoneName { get; set; }
         public string Description {  get; set; }    
         public decimal? PaymentPercentage { get; set; }

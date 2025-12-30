@@ -15,6 +15,7 @@ builder.Services.AddAutoMapper(typeof(ClientProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(ProjectProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(ProjectTeamProfile).Assembly);
 builder.Services.AddAutoMapper(typeof(MileStoneStatusProfile).Assembly);
+builder.Services.AddAutoMapper(typeof(MileStoneProfile).Assembly);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -8,16 +8,16 @@ namespace GenXThofa.Technologies.Estimer.Model.MileStone
 {
     public class MileStoneDto
     {
-        public int MilestoneId { get; set; }
-        public int? ProjectId { get; set; }
+        public int ProjectMilestoneId { get; set; }
+        public int ProjectId { get; set; }
         public string MilestoneName { get; set; }
-        public int? SequenceNumber { get; set; }
+        public string Description { get; set; }
         public decimal? PaymentPercentage { get; set; }
         public decimal? MilestoneAmount { get; set; }
         public int MilestoneStatusId { get; set; }
-        public DateTime? PlannedCompletionDate { get; set; }
-        public DateTime? ActualCompletionDate { get; set; }
-        public DateTime? PaymentReceivedDate { get; set; }
-        public decimal? AmountReceived { get; set; }
+        public string MileStoneStatusName { get; set; }
+        public string StatusColor { get; set; }
+        public DateTime? DueDate { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }

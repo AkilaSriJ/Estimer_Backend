@@ -8,12 +8,12 @@ namespace GenXThofa.Technologies.Estimer.Model.MileStone
 {
     public class UpdateMileStone
     {
-        public int? ProjectId { get; set; }
+        public int ProjectId { get; set; }
         public string MilestoneName { get; set; }
-        public int? SequenceNumber { get; set; }
+        public string Description { get; set; }
         public decimal? PaymentPercentage { get; set; }
         public decimal? MilestoneAmount { get; set; }
         public int MilestoneStatusId { get; set; }
-        public DateTime? PlannedCompletionDate { get; set; }
+        public DateTime? DueDate { get; set; }
     }
 }
