@@ -111,12 +111,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Context
                 .HasForeignKey(pm=>pm.EmployeeId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<ProjectTeamMember>()
-                .HasOne(pm=>pm.Roles)
-                .WithMany(t=>t.TeamMembers)
-                .HasForeignKey(pm=>pm.RoleId)
-                .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder.Entity<ProjectMilestone>()
                 .HasOne(pm=>pm.Project)
                 .WithMany(p=>p.Milestones)

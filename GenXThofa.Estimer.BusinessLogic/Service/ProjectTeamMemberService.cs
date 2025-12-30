@@ -95,11 +95,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
             {
                 throw new Exception($"Invalid Employee ID. Allowed IDs: {string.Join(", ", _hardcodedEmployees.Select(e => e.EmployeeId))}");
             }
-            var role = await _roleRepository.GetByIdAsync(dto.RoleId);
-            if (role == null || !role.IsActive)
-            {
-                throw new Exception("Invalid Role ID");
-            }
+           
 
             var existingTeam = await _projectTeamMemberRepository.GetAll().FirstOrDefaultAsync(x => x.ProjectId == dto.ProjectId &&
                                      x.EmployeeId == dto.EmployeeId &&
@@ -132,11 +128,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
             {
                 throw new Exception($"Invalid Employee ID. Allowed IDs: {string.Join(", ", _hardcodedEmployees.Select(e => e.EmployeeId))}");
             }
-            var role = await _roleRepository.GetByIdAsync(dto.RoleId);
-            if (role == null || !role.IsActive)
-            {
-                throw new Exception("Invalid Role ID");
-            }
+            
             var existingMember = await _projectTeamMemberRepository.GetAll()
             .FirstOrDefaultAsync(x => x.ProjectId == dto.ProjectId &&
                                      x.EmployeeId == dto.EmployeeId &&

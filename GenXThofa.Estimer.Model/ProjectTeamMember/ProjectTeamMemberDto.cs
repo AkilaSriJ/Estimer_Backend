@@ -13,7 +13,6 @@ namespace GenXThofa.Technologies.Estimer.Model.ProjectTeamMember
         public int? EmployeeId { get; set; }
         public string EmployeeName { get; set; }
         public string Designation { get; set; }
-        public int RoleId { get; set; }
         public decimal? HourlyRate { get; set; }
         public int EstimatedHours { get; set; }
         public decimal TotalCost { get; set; }
