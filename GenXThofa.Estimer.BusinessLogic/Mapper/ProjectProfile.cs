@@ -22,7 +22,9 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Mapper
                 .ForMember(d => d.ProjectStatus,
                     o => o.MapFrom(s => s.ProjectStatus.StatusName))
                 .ForMember(d=>d.CompanyName,
-                    o => o.MapFrom(s=>s.Client.CompanyName));
+                    o => o.MapFrom(s=>s.Client.CompanyName))
+                .ForMember(d => d.StatusColor,
+                    o => o.MapFrom(s => s.ProjectStatus.StatusColor));
         }
     }
 }

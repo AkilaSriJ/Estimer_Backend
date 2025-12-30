@@ -22,7 +22,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Repositories
         }
         public async Task<Project> GetByIdAsync(int id)
         {
-            return await _dbContext.Projects.Include(p=>p.ProjectManager)
+            return await _dbContext.Projects.Include(p=>p.Client).Include(p=>p.ProjectManager)
                                             .Include(ps=>ps.ProjectStatus)
                                             .FirstOrDefaultAsync(u => u.ProjectId == id);
         }

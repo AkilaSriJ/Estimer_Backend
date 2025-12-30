@@ -17,6 +17,7 @@ namespace GenXThofa.Technologies.Estimer.Model.Project
         public string ProjectManager { get; set; }
         public int ProjectStatusId { get; set; }
         public string ProjectStatus { get; set; }
+        public string StatusColor { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? PlannedEndDate { get; set; }
         public int? PaymentTerms { get; set; }
