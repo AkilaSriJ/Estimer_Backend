@@ -9,8 +9,8 @@ namespace GenXThofa.Technologies.Estimer.Data.Models
     public class ProjectTeamMember
     {
         public int ProjectTeamMemberId { get; set; }
-        public int? ProjectId { get; set; }
-        public int? EmployeeId { get; set; }
+        public int ProjectId { get; set; }
+        public int EmployeeId { get; set; }
         public string EmployeeName {  get; set; }
         public string Designation { get; set; }
         public decimal? HourlyRate { get; set; }

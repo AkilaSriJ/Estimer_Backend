@@ -80,7 +80,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
                 Data = dtoList
             };
         }
-        public async Task<ProjectTeamMemberDto?> GetByIdAsync(int id)
+        public async Task<ProjectTeamMemberDto> GetByIdAsync(int id)
         {
             var teamMember = await _projectTeamMemberRepository.GetByIdAsync(id);
             if (teamMember == null)

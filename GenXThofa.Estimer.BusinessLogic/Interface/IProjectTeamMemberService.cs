@@ -12,7 +12,7 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Interface
     public interface IProjectTeamMemberService
     {
         Task<PagedResult<ProjectTeamMemberDto>> GetAllAsync(Pagination pagination);
-        Task<ProjectTeamMemberDto?> GetByIdAsync(int id);
+        Task<ProjectTeamMemberDto> GetByIdAsync(int id);
         Task<ProjectTeamMemberDto> CreateAsync(CreateProjectTeamMemberDto dto);
         Task<ProjectTeamMemberDto> UpdateAsync(int id, CreateProjectTeamMemberDto dto);
         Task<bool> DeleteAsync(int id);
