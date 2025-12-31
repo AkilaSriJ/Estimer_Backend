@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GenXThofa.Technologies.Estimer.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251230123758_Update_ProjectTeamMember")]
-    partial class Update_ProjectTeamMember
+    [Migration("20251231093420_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
