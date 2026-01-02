@@ -25,6 +25,12 @@ namespace GenXThofa.Technologies.Estimer.Data.Repositories
         {
             return await _dbContext.ProjectTeamMembers.Include(x=>x.Project).FirstOrDefaultAsync(ps => ps.ProjectTeamMemberId == id);
         }
+        public async Task<List<ProjectTeamMember>> GetByProjectId(int projectId)
+        {
+            return await _dbContext.ProjectTeamMembers
+                           .Where(x => x.ProjectId == projectId)
+                           .ToListAsync();
+        }
         public async Task<ProjectTeamMember> CreateAsync(ProjectTeamMember projectTeamMember)
         {
             if (projectTeamMember == null)

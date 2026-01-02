@@ -11,6 +11,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Interface
     {
         IQueryable<ProjectMilestone> GetAll();
         Task<ProjectMilestone> GetByIdAsync(int id);
+        Task<List<ProjectMilestone>> GetByProjectId(int projectId);
         Task<ProjectMilestone> CreateAsync(ProjectMilestone projectMileStone);
         Task UpdateAsync(ProjectMilestone projectMileStone);
         Task DeleteAsync(ProjectMilestone projectMileStone);

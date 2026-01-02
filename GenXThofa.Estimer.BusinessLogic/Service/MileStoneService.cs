@@ -7,6 +7,7 @@ using GenXThofa.Technologies.Estimer.Data.Models;
 using GenXThofa.Technologies.Estimer.Data.Repositories;
 using GenXThofa.Technologies.Estimer.Model.MileStone;
 using GenXThofa.Technologies.Estimer.Model.Project;
+using GenXThofa.Technologies.Estimer.Model.ProjectTeamMember;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,14 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
             if (mileStone == null)
                 return null;
             return _mapper.Map<MileStoneDto>(mileStone);
+        }
+
+        public async Task<List<MileStoneDto>> GetMileStonesByProjectId(int projectId)
+        {
+            var project = await _mileStoneRepository.GetByProjectId(projectId);
+            if (project == null)
+                return null;
+            return _mapper.Map<List<MileStoneDto>>(project);
         }
 
         public async Task<MileStoneDto> CreateAsync(CreateMileStone dto)

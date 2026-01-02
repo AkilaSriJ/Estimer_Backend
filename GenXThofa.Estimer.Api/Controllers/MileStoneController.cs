@@ -35,6 +35,13 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             }
             return Ok(ApiResponseDto<MileStoneDto>.SuccessResponse(mileStone, "MileStone Fetched Successfully"));
         }
+        
+        [HttpGet("by-project")]
+        public async Task<IActionResult> GetByProjectId([FromQuery] int projectId)
+        {
+            var milestones = await _mileStoneService.GetMileStonesByProjectId(projectId);
+            return Ok(milestones);
+        }
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]

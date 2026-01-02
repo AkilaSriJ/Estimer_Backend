@@ -26,6 +26,12 @@ namespace GenXThofa.Technologies.Estimer.Data.Repositories
                                             .Include(ps => ps.MilestoneStatus)
                                             .FirstOrDefaultAsync(u => u.ProjectMilestoneId == id);
         }
+        public async Task<List<ProjectMilestone>> GetByProjectId(int projectId)
+        {
+            return await _dbContext.ProjectMilestones
+                           .Where(x => x.ProjectId == projectId)
+                           .ToListAsync();
+        }
         public async Task<ProjectMilestone> CreateAsync(ProjectMilestone projectMileStone)
         {
             if (projectMileStone == null)

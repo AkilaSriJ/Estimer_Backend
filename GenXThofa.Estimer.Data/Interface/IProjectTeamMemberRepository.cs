@@ -11,6 +11,7 @@ namespace GenXThofa.Technologies.Estimer.Data.Interface
     {
         IQueryable<ProjectTeamMember> GetAll();
         Task<ProjectTeamMember> GetByIdAsync(int id);
+        Task<List<ProjectTeamMember>> GetByProjectId(int projectId);
         Task<ProjectTeamMember> CreateAsync(ProjectTeamMember projectTeamMember);
         Task UpdateAsync(ProjectTeamMember projectTeamMember);
         Task DeleteAsync(ProjectTeamMember projectTeamMember);

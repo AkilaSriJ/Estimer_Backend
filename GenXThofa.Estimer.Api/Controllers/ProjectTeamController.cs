@@ -42,6 +42,13 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             ));
         }
 
+        [HttpGet("by-project")]
+        public async Task<IActionResult> GetByProjectId([FromQuery] int projectId)
+        {
+            var teamMembers = await _projectTeamMemberService.GetTeamMembersByProjectId(projectId);
+            return Ok(teamMembers);
+        }
+
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

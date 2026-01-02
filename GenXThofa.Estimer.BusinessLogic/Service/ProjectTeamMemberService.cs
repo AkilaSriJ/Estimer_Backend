@@ -87,7 +87,14 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Service
                 return null;
             return _mapper.Map<ProjectTeamMemberDto>(teamMember);
         }
-       
+        public async Task<List<ProjectTeamMemberDto>> GetTeamMembersByProjectId(int projectId)
+        {
+            var project = await _projectTeamMemberRepository.GetByProjectId(projectId);
+            if (project == null)
+                return null;
+            return _mapper.Map<List<ProjectTeamMemberDto>>(project);
+        }
+
         public async Task<ProjectTeamMemberDto> CreateAsync(CreateProjectTeamMemberDto dto)
         {
             var employee = _hardcodedEmployees.FirstOrDefault(e => e.EmployeeId == dto.EmployeeId);
