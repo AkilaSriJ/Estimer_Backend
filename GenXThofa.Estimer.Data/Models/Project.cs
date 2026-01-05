@@ -10,7 +10,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Models
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public string ProjectCode { get; set; }
         public int? ClientId { get; set; }
         public int? ProjectManagerId { get; set; }
         public int ProjectStatusId { get; set; }

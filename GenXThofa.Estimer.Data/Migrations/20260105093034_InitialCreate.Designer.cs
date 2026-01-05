@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GenXThofa.Technologies.Estimer.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251231093420_InitialCreate")]
+    [Migration("20260105093034_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -849,10 +849,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
 
                     b.Property<DateTime?>("PlannedEndDate")
                         .HasColumnType("datetime(6)");
-
-                    b.Property<string>("ProjectCode")
-                        .IsRequired()
-                        .HasColumnType("longtext");
 
                     b.Property<int?>("ProjectManagerId")
                         .HasColumnType("int");

@@ -28,7 +28,7 @@ namespace GenXThofa.Technologies.Estimer.Model.ApiResponse
         {
             return new ApiResponseDto<T>
             {
-                Success=false,  
+                Success = false,
                 Message = message,
                 Errors = errors
             };

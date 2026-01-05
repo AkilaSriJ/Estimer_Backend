@@ -15,6 +15,7 @@ namespace GenXThofa.Technologies.Estimer.API.DependencyInjection
             services.AddScoped<IProjectTeamMemberService, ProjectTeamMemberService>();
             services.AddScoped<IMileStoneStatusService,MileStoneStatusService>();
             services.AddScoped<IMileStoneService,MileStoneService>();
+            services.AddScoped<IEmployeeService,EmployeeService>();
             return services;
         }
     }

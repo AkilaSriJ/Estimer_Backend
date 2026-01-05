@@ -16,5 +16,6 @@ namespace GenXThofa.Technologies.Estimer.BusinessLogic.Interface
         Task<ProjectDto> CreateAsync(CreateProjectDto dto);
         Task<ProjectDto?> UpdateAsync(int id, UpdateProjectDto dto);
         Task<bool> DeleteAsync(int id);
+      
     }
 }

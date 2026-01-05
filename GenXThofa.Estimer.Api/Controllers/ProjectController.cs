@@ -21,7 +21,12 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
         public async Task<IActionResult> GetAll([FromQuery] Pagination pagination)
         {
             var projects = await _projectService.GetAllAsync(pagination);
-            var response = ApiResponseDto<PagedResult<ProjectDto>>.SuccessResponse(projects, "Project Fetched Sucessfully");
+
+            var response = RetrResponse<PagedResult<ProjectDto>>.Success(
+                projects,
+                $"Successfully fetched {projects.Data.Count()} projects"
+            );
+
             return Ok(response);
         }
 
@@ -33,9 +38,12 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             var project= await _projectService.GetByIdAsync(id);
             if (project == null)
             {
-                return NotFound(ApiResponseDto<ProjectDto>.ErrorResponse("Project Not Found"));
+                return NotFound(RetrResponse<ProjectDto>.Failure(
+                       "NOT_FOUND",
+                       $"Project with ID {id} not found"
+                   ));
             }
-            return Ok(ApiResponseDto<ProjectDto>.SuccessResponse(project, "Project Fetched Successfully"));
+            return Ok(RetrResponse<ProjectDto>.Success(project, "Project fetched successfully"));
         }
 
         [HttpPost]
@@ -44,11 +52,19 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
         public async Task<IActionResult> Create(CreateProjectDto dto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ApiResponseDto<object>.ErrorResponse("Validation failed", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList()));
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                return BadRequest(RetrResponse<ProjectDto>.Failure("VALIDATION_ERROR","Validation failed",errors));
+
+            }
             var createdProject = await _projectService.CreateAsync(dto);
             if (createdProject == null)
                 return BadRequest(createdProject);
-            return Ok(ApiResponseDto<ProjectDto>.SuccessResponse(createdProject, "Project Created Successfully"));
+            return CreatedAtAction(
+                   nameof(GetById),
+                   new { id = createdProject.ProjectId },
+                   RetrResponse<ProjectDto>.Success(createdProject, "Project created successfully")
+               );
         }
 
         [HttpPut("{id}")]
@@ -59,10 +75,14 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             var updatedProject = await _projectService.UpdateAsync(id, dto);
             if (updatedProject == null)
             {
-                return NotFound(ApiResponseDto<ProjectDto>.ErrorResponse("Project not found"));
+                return NotFound(RetrResponse<ProjectDto>.Failure(
+                       "NOT_FOUND",
+                       $"Project with ID {id} not found"
+                   ));
             }
 
-            return Ok(ApiResponseDto<ProjectDto>.SuccessResponse(updatedProject, "Project Updated Successfully"));
+            return Ok(RetrResponse<ProjectDto>.Success(updatedProject, "Project updated successfully"));
+
         }
 
         [HttpDelete("{id}")]
@@ -73,9 +93,12 @@ namespace GenXThofa.Technologies.Estimer.API.Controllers
             var isDeleted = await _projectService.DeleteAsync(id);
             if (!isDeleted)
             {
-                return NotFound(ApiResponseDto<bool>.ErrorResponse("Project Not Found"));
+                return NotFound(RetrResponse<bool>.Failure(
+                        "NOT_FOUND",
+                        $"Project with ID {id} not found"
+                    ));
             }
-            return Ok(ApiResponseDto<bool>.SuccessResponse(true, "Project Deleted Successfully"));
+            return Ok(RetrResponse<bool>.Success(true, "Project deleted successfully"));
         }
     }
 }

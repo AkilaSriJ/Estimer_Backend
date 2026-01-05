@@ -500,8 +500,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     ProjectName = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    ProjectCode = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     ClientId = table.Column<int>(type: "int", nullable: true),
                     ProjectManagerId = table.Column<int>(type: "int", nullable: true),
                     ProjectStatusId = table.Column<int>(type: "int", nullable: false),

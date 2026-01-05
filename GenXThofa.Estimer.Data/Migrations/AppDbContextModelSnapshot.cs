@@ -847,10 +847,6 @@ namespace GenXThofa.Technologies.Estimer.Data.Migrations
                     b.Property<DateTime?>("PlannedEndDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("ProjectCode")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<int?>("ProjectManagerId")
                         .HasColumnType("int");
 
